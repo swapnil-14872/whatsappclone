@@ -3,12 +3,13 @@ import React, { useState } from 'react';
 import Sidebar from './Sidebar';
 import Chat from './Chat';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import Login from './Login';
 function App() {
 	const [user,setuser]= useState(null);
 	{/*if there is a user show a login screen else show your chats*/}
   return (
     <div className="app">
-		{!user ? (<h1>Login</h1>) :(<div className="app_body">
+		{!user ? (<Login/>) :(<div className="app_body">
 	 <BrowserRouter>
 	 <Sidebar/> {/*always  show sidebar*/}
 			<Routes>
